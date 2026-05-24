@@ -1,0 +1,13 @@
+{
+  "name": "zhihuishu-automation",
+  "version": "1.0.0",
+  "description": "智慧树网课视频自动播放辅助脚本 — 仅用于视频播放与课堂互动",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "debug": "node main.js --debug"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}
