@@ -176,7 +176,7 @@ async function launchEdge(port = 9222) {
 
   const child = spawn(exe, [
     `--remote-debugging-port=${port}`,
-    `--user-data-dir="${userDataDir}"`,
+    `--user-data-dir=${userDataDir}`,
     '--no-first-run',
     '--no-default-browser-check',
     '--start-maximized',

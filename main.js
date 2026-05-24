@@ -449,7 +449,13 @@ async function main() {
       }
     }
     if (!targetPage) {
+      // 没有智慧树页面 → 导航到智慧树首页
       targetPage = pages[pages.length - 1] || (await context.newPage());
+      logger.info('未找到智慧树页面，正在导航到 zhihuishu.com...');
+      await targetPage.goto('https://www.zhihuishu.com/', {
+        waitUntil: 'domcontentloaded',
+        timeout: 30000,
+      }).catch(e => logger.warn('导航到智慧树失败:', e.message));
     }
 
     page = targetPage;
