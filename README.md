@@ -24,7 +24,6 @@
 ## 安装
 
 ```bash
-cd zhihuishu-automation
 npm install
 ```
 
